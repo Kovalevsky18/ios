@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="browser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CoH-ne-kbp">
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                            </webView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFJ-Wf-NYS">
+                                <rect key="frame" x="0.0" y="44" width="366" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8oi-je-uts"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BD7-FF-V9h">
+                                <rect key="frame" x="366" y="44" width="48" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xky-AJ-eY1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CoH-ne-kbp" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="25H-tz-n0e"/>
+                            <constraint firstItem="CoH-ne-kbp" firstAttribute="top" secondItem="AFJ-Wf-NYS" secondAttribute="bottom" id="Cnr-MG-9oC"/>
+                            <constraint firstItem="CoH-ne-kbp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="djv-az-A5H"/>
+                            <constraint firstItem="CoH-ne-kbp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f24-f7-xnd"/>
+                            <constraint firstItem="CoH-ne-kbp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nej-Xl-AlP"/>
+                            <constraint firstItem="AFJ-Wf-NYS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rgB-Gz-FGM"/>
+                            <constraint firstItem="AFJ-Wf-NYS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uE8-e9-u4u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="AFJ-Wf-NYS" id="3FE-19-Ogm"/>
+                        <outlet property="webView" destination="CoH-ne-kbp" id="cWM-cK-8tY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
